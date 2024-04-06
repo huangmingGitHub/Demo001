@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="../../../static/js/vue.js"></script>
+    <title>Title</title>
+    <style>
+        .move{
+            font-size: 40px;
+            border: 2px;
+            background-color: bisque;
+            color: blueviolet;
+            margin-top: 50px;
+            float: right;
+        }
+        .green{
+            font-size: 40px;
+            font-style: italic;
+            border-radius: 0;
+            background-color: rgb(227, 236, 236);
+            color: rgb(171, 31, 31);
+            padding-left: 50%;
+            padding-right: 50%;
+            height: 30%;
+        }
+        .character{
+            height: 90px;
+            width: 90px;
+        }
+    </style>
+</head>
+<body>
+    <div id="mainVue">
+        <div :class="green">天天酷跑</div>
+        <img src="../../../static/img/character.png" alt="主角" class="character" :class="{marginTop: top + 'px'}"></img>
+        <button @click="jump" class="move">点我跳跃</button>
+    </div>
+    <script>
+        const vm = new Vue({
+            el:'#mainVue',
+            data:{
+                msg:'hello,你是个好人',
+                green:{
+                    green: true
+                },
+                top:'50',
+                position: 'up'
+            },
+            methods: {
+                jump(){
+                    this.top = '60'
+                }
+            },   
+            computed:{
+
+            }      
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="../static/js/jquery.js"></script>
+    <title>登录页面</title>
+</head>
+<body>
+    <div >
+        <label>账户:</label>
+        <input>
+        <label>密码:</label>
+        <input>
+        <a href="/login" >登录</a>
+        <button id="loginBtn" >登录按钮</button>
+    </div>
+<script >
+    $("#loginBtn").click(function(){
+            $.ajax({
+            url:'http://127.0.0.1:8080/login',
+            data:{username: 11,password: 12}
+            })
+        })
+</script>
+</body>
+</html>

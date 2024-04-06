@@ -1,0 +1,25 @@
+#server:
+#  port: 8080
+spring:
+  datasource:
+    username: root
+    password: 123456
+    #mybatis数据库名  unicode防止乱码   characterEncoding编码语言    serverTimezone=UTC时区
+    url: jdbc:mysql://localhost:3306/database1?useUnicode=true&characterEncoding=utf-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#springboot会读取static下的静态资源，且会拦截templates下的动态资源，可以借用thymeleaf调用动态资源或通过系统调用
+#  thymeleaf:
+#    prefix: classpath:/static/,classpath:/templates/
+
+#
+#  mvc:
+#    static-path-pattern: /**
+#
+#  resources:
+#    static-locations: classpath:/static
+
+mybatis:
+#  type-aliases-package: com.huang.pojo
+  mapper-locations: classpath:mybatis/mapper/*.xml
+
+
