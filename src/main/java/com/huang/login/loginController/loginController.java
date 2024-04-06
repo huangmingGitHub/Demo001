@@ -27,6 +27,4 @@ public class loginController {
         }
         return true;
     }
-
-    //测试
 }

@@ -17,7 +17,7 @@ public class MainController {
         String info = mainService.getInfo();
         return "html/mainPage/mainPage";
     }
-    @RequestMapping("/index")
+    @RequestMapping("/index2")
     public String index(){
         return "index";
     }
