@@ -9,4 +9,6 @@ public interface MainMapper {
 
     String getMessage();
 
+    boolean checkUser(String username,String password);
+
 }

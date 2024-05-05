@@ -4,4 +4,7 @@
     <select id="getMessage" resultType="java.lang.String">
         select CREATE_USER from GAME_SAVE WHERE ID = 1
     </select>
+    <select id="checkUser" resultType="java.lang.Boolean">
+        select count(1) from GAME_SAVE
+    </select>
 </mapper>
